@@ -44,7 +44,7 @@ The following table provides an overview of how to switch from each type of repl
 <sup>2</sup> Conversion from ZRS to GZRS/RA-GZRS or vice versa is not supported in the following regions: US East 2, US East, Europe West.
 
 > [!CAUTION]
-> If you performed an [account failover](storage-disaster-recovery-guidance.md) for your (RA-)GRS or (RA-)GZRS account, the account is locally redundant in the new primary region after the failover. Live migration to ZRS or GZRS for an LRS account resulting from a failover is not supported. You will need to perform a [manual migration](#perform-a-manual-migration-to-zrs) to ZRS or GZRS.
+> If you performed an [account failover](storage-disaster-recovery-guidance.md) for your (RA-)GRS or (RA-)GZRS account, the account is locally redundant in the new primary region after the failover. Live migration to ZRS or GZRS for an LRS account resulting from a failover is not supported. This is also true for so-called failback operations. So, for example, if an account failover from RA-GZRS and is migrated to LRS in the secondary region and then configured to RA-GRS again, it cannot be live migrated to RA-GZRS in the original primary region. You will need to perform a [manual migration](#perform-a-manual-migration-to-zrs) to ZRS or GZRS.
 
 ## Change the replication setting
 
